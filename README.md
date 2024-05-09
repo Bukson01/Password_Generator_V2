@@ -1,4 +1,4 @@
-# Password_Generator_V2
+
 # Password Generator Version 2
 
 This Python script generates random passwords of specified lengths and saves them to an Excel file. It also includes a graphical user interface (GUI) for user interaction.
