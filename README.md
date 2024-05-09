@@ -20,14 +20,14 @@ This Python script generates random passwords of specified lengths and saves the
 
 ## Dependencies
 
-- Python 3.x
+- Python 3.11
 - `tkinter` (standard library)
 - `openpyxl` (install via `pip install openpyxl`)
 
 ## Contributors
 
-- Original code by [Author's Name](https://github.com/Bukson01).
-- GUI enhancement and Excel file integration by [Your Name](https://github.com/Bukson01).
+- Original code by [Bukason](https://github.com/Bukson01).
+- GUI enhancement and Excel file integration by [Bukason](https://github.com/Bukson01).
 
 ## License
 
