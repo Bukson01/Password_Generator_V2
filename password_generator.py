@@ -43,7 +43,8 @@ def generate_and_save_password():
     # Update result label to display generated password
     result_label.config(text="Generated Password: " + generated_password)
     
-    
+    # Show message box to prompt user for saving or generating another password
+    choice = messagebox.askyesnocancel("Save Password", "Do you want to save this password?")
 
 # Create GUI window
 root = tk.Tk()
