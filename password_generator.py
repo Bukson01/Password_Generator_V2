@@ -43,8 +43,7 @@ def generate_and_save_password():
     # Update result label to display generated password
     result_label.config(text="Generated Password: " + generated_password)
     
-    # Show message box to notify user that password has been generated and saved
-    messagebox.showinfo("Password Generated", "Password saved to passwords.xlsx")
+    
 
 # Create GUI window
 root = tk.Tk()
