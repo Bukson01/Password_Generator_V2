@@ -46,14 +46,14 @@ root = tk.Tk()
 root.title("Password Generator")
 
 # Create label and entry widgets for password length input
-length_label = tk.Label(root, text="Password Length:")
+length_label = tk.Label(root, text="Password Length: ")
 length_label.pack()
 
 length_entry = tk.Entry(root)
 length_entry.pack()
 
 # Create button to generate and save password
-generate_button = tk.Button(root, text="Generate Password", command=generate_and_save_password)
+generate_button = tk.Button(root, text="Generate Password ", command=generate_and_save_password)
 generate_button.pack()
 
 # Start the GUI event loop
