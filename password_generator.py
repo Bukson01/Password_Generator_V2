@@ -46,6 +46,10 @@ def generate_and_save_password():
     # Show message box to prompt user for saving or generating another password
     choice = messagebox.askyesnocancel("Save Password", "Do you want to save this password?")
 
+    if choice is True:
+        # Save password to Excel file
+        save_to_excel(generated_password)
+
 # Create GUI window
 root = tk.Tk()
 root.title("Password Generator")
