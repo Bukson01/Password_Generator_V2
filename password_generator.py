@@ -1,9 +1,10 @@
-import random  # Import the random module to generate random values
-import string  # Import the string module for working with strings
-import tkinter as tk  # Import tkinter for creating GUI applications
-from tkinter import messagebox  # Import messagebox from tkinter for displaying messages
-from openpyxl import Workbook  # Import Workbook from openpyxl for working with Excel files
-from datetime import datetime  # Import datetime from datetime for working with dates and times
+# Import necessary modules
+import random
+import string
+import tkinter as tk
+from tkinter import messagebox
+from openpyxl import Workbook
+from datetime import datetime
 
 def generate_password(length=12):
     """Generate a random password."""
