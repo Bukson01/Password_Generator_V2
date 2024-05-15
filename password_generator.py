@@ -16,29 +16,33 @@ def generate_password(length=12):
 
 def save_to_excel(password):
     """Save password to an Excel file."""
-    # Create a new Excel workbook and select the active worksheet
+    # Create a new workbook and select active worksheet
     wb = Workbook()
     ws = wb.active
     
-    # Add a header row and password data to the worksheet
+    # Add header row and password data
     ws.append(["Generated Password", "Date & Time"])
     ws.append([password, datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
     
-    # Save the workbook to a file named "passwords.xlsx"
+    # Save workbook to a file named "passwords.xlsx"
     wb.save("passwords.xlsx")
 
+# Function to generate and save password
 def generate_and_save_password():
     """Generate and save password."""
-    # Get the password length from the user input
+    # Get password length from user input
     password_length = int(length_entry.get())
     
-    # Generate a password of the specified length
+    # Generate password
     generated_password = generate_password(password_length)
     
-    # Save the generated password to an Excel file
+    # Save password to Excel file
     save_to_excel(generated_password)
     
-    # Display a message box to notify the user that the password has been generated and saved
+    # Update result label to display generated password
+    result_label.config(text="Generated Password: " + generated_password)
+    
+    # Show message box to notify user that password has been generated and saved
     messagebox.showinfo("Password Generated", "Password saved to passwords.xlsx")
 
 # Create GUI window
@@ -46,15 +50,19 @@ root = tk.Tk()
 root.title("Password Generator")
 
 # Create label and entry widgets for password length input
-length_label = tk.Label(root, text="Password Length: ")
+length_label = tk.Label(root, text="Password Length:")
 length_label.pack()
 
 length_entry = tk.Entry(root)
 length_entry.pack()
 
 # Create button to generate and save password
-generate_button = tk.Button(root, text="Generate Password ", command=generate_and_save_password)
+generate_button = tk.Button(root, text="Generate Password", command=generate_and_save_password)
 generate_button.pack()
 
-# Start the GUI event loop
+# Create label widget to display generated password
+result_label = tk.Label(root, text="")
+result_label.pack()
+
+# Start GUI event loop
 root.mainloop()
