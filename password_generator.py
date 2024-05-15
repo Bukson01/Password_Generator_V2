@@ -14,6 +14,7 @@ def generate_password(length=12):
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
 
+# Function to save password to an Excel file
 def save_to_excel(password):
     """Save password to an Excel file."""
     # Create a new workbook and select active worksheet
