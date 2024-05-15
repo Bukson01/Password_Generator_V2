@@ -51,6 +51,9 @@ def generate_and_save_password():
         save_to_excel(generated_password)
         # Show message box to notify user that password has been saved
         messagebox.showinfo("Password Saved", "Password saved to passwords.xlsx")
+    elif choice is False:
+        # Clear entry widget to allow user to generate another password
+        length_entry.delete(0, tk.END)
 
 # Create GUI window
 root = tk.Tk()
