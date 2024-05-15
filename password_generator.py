@@ -49,6 +49,8 @@ def generate_and_save_password():
     if choice is True:
         # Save password to Excel file
         save_to_excel(generated_password)
+        # Show message box to notify user that password has been saved
+        messagebox.showinfo("Password Saved", "Password saved to passwords.xlsx")
 
 # Create GUI window
 root = tk.Tk()
