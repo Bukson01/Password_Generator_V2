@@ -54,6 +54,8 @@ def generate_and_save_password():
     elif choice is False:
         # Clear entry widget to allow user to generate another password
         length_entry.delete(0, tk.END)
+    else:
+        quit()#pass  # User cancelled operation
 
 # Create GUI window
 root = tk.Tk()
