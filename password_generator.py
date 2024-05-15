@@ -33,7 +33,20 @@ def save_to_excel(password):
 def generate_and_save_password():
     """Generate and save password."""
     # Get password length from user input
-    password_length = int(length_entry.get())
+    password_length_str = length_entry.get()
+    
+    # Check if length entry is empty
+    if not password_length_str:
+        messagebox.showerror("Error", "Please enter the length of the password.")
+        return
+    
+    # Convert password length to integer
+    try:
+        password_length = int(password_length_str)
+    except ValueError:
+        messagebox.showerror("Error", "Invalid input. Please enter a valid integer for password length.")
+        return
+    
     
     # Generate password
     generated_password = generate_password(password_length)
