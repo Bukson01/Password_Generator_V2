@@ -47,7 +47,6 @@ def generate_and_save_password():
         messagebox.showerror("Error", "Invalid input. Please enter a valid integer for password length.")
         return
     
-    
     # Generate password
     generated_password = generate_password(password_length)
     
